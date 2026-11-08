@@ -1,0 +1,235 @@
+{
+  "classification": {
+    "balanced_accuracy": 0.9748,
+    "false_alarm_rate_normal": 0.0173,
+    "confusion_matrix": [
+      [
+        35730,
+        197,
+        327,
+        0,
+        0,
+        0,
+        0,
+        0,
+        106
+      ],
+      [
+        403,
+        6797,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        313,
+        0,
+        6871,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16
+      ],
+      [
+        0,
+        0,
+        0,
+        7200,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        7200,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        7194,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7200,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        7196,
+        0
+      ],
+      [
+        434,
+        45,
+        287,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6434
+      ]
+    ],
+    "classification_report": {
+      "NORMAL": {
+        "precision": 0.9686601962804317,
+        "recall": 0.9826732673267327,
+        "f1-score": 0.975616415913497,
+        "support": 36360.0
+      },
+      "POSITIVE_DRIFT": {
+        "precision": 0.9656201164938202,
+        "recall": 0.9440277777777778,
+        "f1-score": 0.9547018751316806,
+        "support": 7200.0
+      },
+      "NEGATIVE_DRIFT": {
+        "precision": 0.9179692718770875,
+        "recall": 0.9543055555555555,
+        "f1-score": 0.9357848144364999,
+        "support": 7200.0
+      },
+      "SUDDEN_OFFSET": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 7200.0
+      },
+      "EXCESSIVE_NOISE": {
+        "precision": 0.9994447529150472,
+        "recall": 1.0,
+        "f1-score": 0.9997222993612885,
+        "support": 7200.0
+      },
+      "SENSOR_FREEZE": {
+        "precision": 1.0,
+        "recall": 0.9991666666666666,
+        "f1-score": 0.9995831596498541,
+        "support": 7200.0
+      },
+      "SENSOR_DROPOUT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 7200.0
+      },
+      "GENUINE_OCCLUSION": {
+        "precision": 1.0,
+        "recall": 0.9994444444444445,
+        "f1-score": 0.999722145040289,
+        "support": 7200.0
+      },
+      "TEMPERATURE_INFLUENCE": {
+        "precision": 0.9813910921293472,
+        "recall": 0.8936111111111111,
+        "f1-score": 0.9354463506833381,
+        "support": 7200.0
+      },
+      "accuracy": 0.9772456364410388,
+      "macro avg": {
+        "precision": 0.9814539366328593,
+        "recall": 0.9748032025424764,
+        "f1-score": 0.9778418955796053,
+        "support": 93960.0
+      },
+      "weighted avg": {
+        "precision": 0.9774834654890026,
+        "recall": 0.9772456364410388,
+        "f1-score": 0.9771512294763302,
+        "support": 93960.0
+      }
+    },
+    "classes_evaluated": [
+      "NORMAL",
+      "POSITIVE_DRIFT",
+      "NEGATIVE_DRIFT",
+      "SUDDEN_OFFSET",
+      "EXCESSIVE_NOISE",
+      "SENSOR_FREEZE",
+      "SENSOR_DROPOUT",
+      "GENUINE_OCCLUSION",
+      "TEMPERATURE_INFLUENCE"
+    ]
+  },
+  "regression_pressure": {
+    "mae": 0.5895,
+    "rmse": 1.9369,
+    "r2_score": 0.9945,
+    "units": "mmHg"
+  },
+  "sample_explanation": {
+    "predicted_class": "TEMPERATURE_INFLUENCE",
+    "confidence": 0.9984,
+    "top_contributing_features": [
+      {
+        "feature": "temp_raw",
+        "value": 27.6026,
+        "shap_attribution": 5.1386,
+        "influence_direction": "PUSHED_TOWARD"
+      },
+      {
+        "feature": "has_flow_channel",
+        "value": 0.0,
+        "shap_attribution": -1.4305,
+        "influence_direction": "PUSHED_AWAY"
+      },
+      {
+        "feature": "p_dt_residual",
+        "value": 6.1614,
+        "shap_attribution": -0.3975,
+        "influence_direction": "PUSHED_AWAY"
+      },
+      {
+        "feature": "p_roll_std_60",
+        "value": 0.9233,
+        "shap_attribution": -0.3686,
+        "influence_direction": "PUSHED_AWAY"
+      },
+      {
+        "feature": "temp_roll_delta_60",
+        "value": 0.3196,
+        "shap_attribution": 0.1976,
+        "influence_direction": "PUSHED_TOWARD"
+      }
+    ],
+    "explanation_summary": "Prediction: TEMPERATURE_INFLUENCE (confidence: 99.8%). Primary factors: temp_raw (27.60) increased likelihood of TEMPERATURE_INFLUENCE (attribution: +5.139); has_flow_channel (0.00) reduced likelihood of TEMPERATURE_INFLUENCE (attribution: -1.431); p_dt_residual (6.16) reduced likelihood of TEMPERATURE_INFLUENCE (attribution: -0.398).",
+    "disclaimer": "Interpretability Notice: SHAP feature attributions reflect statistical model associations within the decision trees and must NOT be interpreted as causal physiological proof."
+  },
+  "model_paths": {
+    "classifier": "D:\\techgium\\models\\classification\\xgboost_classifier.joblib",
+    "regressor_pressure": "D:\\techgium\\models\\regression\\xgboost_regressor_pressure.joblib"
+  }
+}

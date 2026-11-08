@@ -1,0 +1,310 @@
+{
+  "dataset_provenance_audit": {
+    "datasets": {
+      "Zenodo_DosePI_Peristaltic": {
+        "category": "REAL_PUBLIC_DATA",
+        "path": "data/raw/dosepi/dosepi-datasets",
+        "used_for": "Physical peristaltic baseline benchmarking & exploratory flow verification (Phase 1 & 2)",
+        "used_in_classifier_training": false,
+        "used_in_regressor_training": false,
+        "reason_excluded_from_pump_classifier": "Contains motor pulses and delivery volume from a peristaltic delivery mechanism; incompatible with syringe pump hydraulic force and line catheter pressure physics."
+      },
+      "Zenodo_Typical_Sensor_Defects": {
+        "category": "REAL_PUBLIC_DATA",
+        "path": "data/raw/sensor_defects/extracted",
+        "used_for": "Classical drift benchmark (EWMA/CUSUM evaluation in Phase 2)",
+        "used_in_classifier_training": false,
+        "used_in_regressor_training": false,
+        "reason_excluded_from_pump_classifier": "Single-channel synthetic sensor vibration defect benchmark; lacking multi-sensor cross-hydraulic pressure-force relationships."
+      },
+      "Real_Custom_Infusion_Pump_Data": {
+        "category": "REAL_CUSTOM_DATA",
+        "path": "data/custom",
+        "status": "NONE_AVAILABLE",
+        "note": "No physical bench measurements currently exist in the workspace."
+      },
+      "Simulator_Infusion_Pump_Data": {
+        "category": "SYNTHETIC_DATA",
+        "generator": "src/data/synthetic_generator.py",
+        "used_in_classifier_training": true,
+        "used_in_regressor_training": true,
+        "provenance_tag": "SYNTHETIC_DATA"
+      }
+    },
+    "critical_finding_reference_measurements": {
+      "stated_in_concept": "NIST-traceable calibrated manometer reference measurements",
+      "audit_fact": "ALL reference pressure values (reference_pressure_mmhg) in training and evaluation are 100% SIMULATED SYNTHETIC DATA generated via p_true in src/data/synthetic_generator.py. No physical hardware NIST-traceable measurements currently exist in this repository.",
+      "physical_validation_status": "PENDING_PHYSICAL_BENCH_TESTING",
+      "regulatory_rule": "Simulated reference values must NEVER be described as NIST-traceable measurements. Real sensor-error estimation cannot be claimed as physically validated until bench tests are executed."
+    }
+  },
+  "data_leakage_audit": {
+    "run_level_separation": {
+      "status": "VERIFIED_STRICT",
+      "details": "Training (seeds 42, 101, 202), validation (seed 303), and testing (seeds 404, 505) represent completely separated experimental sessions."
+    },
+    "cross_run_window_overlap": {
+      "status": "VERIFIED_ZERO_OVERLAP",
+      "details": "Feature transformation is executed inside each individual run DataFrame. No rolling window crosses run boundaries."
+    },
+    "preprocessing_leakage": {
+      "status": "VERIFIED_ZERO_LEAKAGE",
+      "details": "Feature pipeline uses physics equations and causal rolling windows without fitting global statistical scalers on test data."
+    },
+    "temporal_causality": {
+      "status": "VERIFIED_CAUSAL",
+      "details": "Rolling windows strictly look backward (min_periods=1..5, window=60). No lookahead (.shift(-k) or center=True) is used."
+    },
+    "target_leakage": {
+      "status": "VERIFIED_ZERO_LEAKAGE",
+      "details": "Features strictly use available sensor channels and commanded rate. Ground truth labels and reference pressure are never included in X."
+    }
+  },
+  "generalization_evaluation": {
+    "total_test_samples": 57600,
+    "number_of_stress_scenarios": 40,
+    "balanced_accuracy": 0.7911435115566694,
+    "macro_f1": 0.7748072617463552,
+    "weighted_f1": 0.7628232685401027,
+    "normal_false_alarm_rate": 0.19669172932330828,
+    "normal_false_alarms_per_hour": 708.09,
+    "confusion_matrix": [
+      [
+        21368,
+        2369,
+        473,
+        0,
+        2353,
+        0,
+        0,
+        0,
+        37
+      ],
+      [
+        2139,
+        6034,
+        12,
+        846,
+        966,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        2749,
+        138,
+        2807,
+        0,
+        281,
+        0,
+        0,
+        0,
+        25
+      ],
+      [
+        0,
+        0,
+        0,
+        3000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        48,
+        194,
+        1,
+        27,
+        1002,
+        0,
+        0,
+        728,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        1998,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2000,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        3997,
+        0
+      ],
+      [
+        161,
+        346,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1493
+      ]
+    ],
+    "classification_report": {
+      "NORMAL": {
+        "precision": 0.8073144929726462,
+        "recall": 0.8033082706766917,
+        "f1-score": 0.8053063993367001,
+        "support": 26600.0
+      },
+      "POSITIVE_DRIFT": {
+        "precision": 0.6644642660499945,
+        "recall": 0.6034,
+        "f1-score": 0.6324616110266758,
+        "support": 10000.0
+      },
+      "NEGATIVE_DRIFT": {
+        "precision": 0.8524142119647737,
+        "recall": 0.4678333333333333,
+        "f1-score": 0.6041106208974497,
+        "support": 6000.0
+      },
+      "SUDDEN_OFFSET": {
+        "precision": 0.774593338497289,
+        "recall": 1.0,
+        "f1-score": 0.8729812309035355,
+        "support": 3000.0
+      },
+      "EXCESSIVE_NOISE": {
+        "precision": 0.21763683753258037,
+        "recall": 0.501,
+        "f1-score": 0.3034524530587523,
+        "support": 2000.0
+      },
+      "SENSOR_FREEZE": {
+        "precision": 1.0,
+        "recall": 0.999,
+        "f1-score": 0.9994997498749375,
+        "support": 2000.0
+      },
+      "SENSOR_DROPOUT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2000.0
+      },
+      "GENUINE_OCCLUSION": {
+        "precision": 0.845925925925926,
+        "recall": 0.99925,
+        "f1-score": 0.9162177650429799,
+        "support": 4000.0
+      },
+      "TEMPERATURE_INFLUENCE": {
+        "precision": 0.9582798459563543,
+        "recall": 0.7465,
+        "f1-score": 0.8392355255761664,
+        "support": 2000.0
+      },
+      "accuracy": 0.7586631944444444,
+      "macro avg": {
+        "precision": 0.7911809909888404,
+        "recall": 0.7911435115566694,
+        "f1-score": 0.7748072617463552,
+        "support": 57600.0
+      },
+      "weighted avg": {
+        "precision": 0.7863369883946948,
+        "recall": 0.7586631944444444,
+        "f1-score": 0.7628232685401027,
+        "support": 57600.0
+      }
+    }
+  },
+  "probability_calibration_audit": {
+    "brier_score": 0.39791,
+    "expected_calibration_error": 0.1506,
+    "reliability_bins": {
+      "bin_centers": [
+        0.25,
+        0.35000000000000003,
+        0.45,
+        0.55,
+        0.6500000000000001,
+        0.75,
+        0.8500000000000001,
+        0.95
+      ],
+      "accuracies": [
+        0.16666666666666666,
+        0.44511278195488724,
+        0.4674698795180723,
+        0.4792482380579483,
+        0.51831429696731,
+        0.5710859883521754,
+        0.6403940886699507,
+        0.8314585720633287
+      ],
+      "confidences": [
+        0.28360775113105774,
+        0.36083856225013733,
+        0.4567282795906067,
+        0.5506864786148071,
+        0.6506932973861694,
+        0.7528228163719177,
+        0.8561822175979614,
+        0.9854246377944946
+      ],
+      "counts": [
+        36,
+        665,
+        1660,
+        2554,
+        2539,
+        2919,
+        4466,
+        42761
+      ]
+    }
+  },
+  "regression_validation_audit": {
+    "synthetic_test_metrics": {
+      "mae": 0.7942550363955896,
+      "rmse": 2.7464748147784306,
+      "r2_score": 0.9846106892924673,
+      "residual_mean": -0.253,
+      "residual_median": -0.0028,
+      "residual_std": 2.7348,
+      "residual_skewness": -4.5074,
+      "residual_kurtosis": 25.269,
+      "empirical_95_bounds": [
+        -9.3799,
+        3.9058
+      ],
+      "gaussian_heuristic_halfwidth_1_96_rmse": 5.3831,
+      "confidence_interval_critical_appraisal": "Describing 1.96 * RMSE as a validated 95% confidence interval is mathematically invalid when residuals exhibit heavy tails or heteroscedasticity. Physical regression validation is marked PENDING."
+    },
+    "real_hardware_validation": {
+      "status": "PENDING_PHYSICAL_BENCH_TESTING",
+      "notes": "No physical sensor paired reference data currently exists in the repository."
+    }
+  }
+}

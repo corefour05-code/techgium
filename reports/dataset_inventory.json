@@ -1,0 +1,4768 @@
+{
+  "dosepi": {
+    "id": "dosepi",
+    "name": "DosePI: Extensive Dataset for Peristaltic Pump Accuracy Enhancement",
+    "paper_url": "https://www.nature.com/articles/s41597-025-05902-z",
+    "doi": "10.1038/s41597-025-05902-z",
+    "purpose": "Pump delivery accuracy, dosing variation, compensation modelling, pump output behaviour.",
+    "type": "Pharmaceutical peristaltic filling pump dataset (not clinical intravenous continuous infusion).",
+    "sensors_supported": [
+      "flow",
+      "weight_dosing",
+      "motor_steps",
+      "operating_parameters"
+    ],
+    "files": [
+      {
+        "file_name": "dosepi-datasets.zip",
+        "relative_path": "raw\\dosepi\\dosepi-datasets.zip",
+        "file_size_bytes": 970545,
+        "file_size_mb": 0.926,
+        "format": ".zip"
+      },
+      {
+        "file_name": "0.2 ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\core\\0.2 ml.csv",
+        "file_size_bytes": 33494,
+        "file_size_mb": 0.032,
+        "total_rows_inspected": 2652,
+        "total_columns": 1,
+        "columns": [
+          "p [g]"
+        ],
+        "column_profiles": {
+          "p [g]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 68,
+            "min": -99.0,
+            "max": 0.213000000000001,
+            "mean": -1.7453,
+            "std": 13.7565,
+            "has_infinite": false
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 2584
+      },
+      {
+        "file_name": "0.3 ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\core\\0.3 ml.csv",
+        "file_size_bytes": 93090,
+        "file_size_mb": 0.089,
+        "total_rows_inspected": 16221,
+        "total_columns": 1,
+        "columns": [
+          "p [g]"
+        ],
+        "column_profiles": {
+          "p [g]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 34,
+            "min": -99.0,
+            "max": 0.315,
+            "mean": -0.0304,
+            "std": 5.72,
+            "has_infinite": false
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 16187
+      },
+      {
+        "file_name": "1.2 ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\core\\1.2 ml.csv",
+        "file_size_bytes": 94727,
+        "file_size_mb": 0.09,
+        "total_rows_inspected": 16249,
+        "total_columns": 1,
+        "columns": [
+          "p [g]"
+        ],
+        "column_profiles": {
+          "p [g]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 40,
+            "min": -99.0,
+            "max": 1.22,
+            "mean": 0.867,
+            "std": 5.7669,
+            "has_infinite": false
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 16209
+      },
+      {
+        "file_name": "2.0 ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\core\\2.0 ml.csv",
+        "file_size_bytes": 45148,
+        "file_size_mb": 0.043,
+        "total_rows_inspected": 7824,
+        "total_columns": 1,
+        "columns": [
+          "p [g]"
+        ],
+        "column_profiles": {
+          "p [g]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 59,
+            "min": -99.0,
+            "max": 2.029,
+            "mean": 1.6618,
+            "std": 5.8128,
+            "has_infinite": false
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 7765
+      },
+      {
+        "file_name": "p10-0.1ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\AR-onlineTraining\\p10-0.1ml.csv",
+        "file_size_bytes": 399854,
+        "file_size_mb": 0.381,
+        "total_rows_inspected": 9628,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6398,
+            "min": 0.0,
+            "max": 0.108467076959361,
+            "mean": 0.1012,
+            "std": 0.002,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 61,
+            "min": -1.0,
+            "max": 0.109,
+            "mean": 0.0962,
+            "std": 0.0634,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6388
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 3110
+      },
+      {
+        "file_name": "p10-0.2ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\AR-onlineTraining\\p10-0.2ml.csv",
+        "file_size_bytes": 436337,
+        "file_size_mb": 0.416,
+        "total_rows_inspected": 11438,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7602,
+            "min": 0.0,
+            "max": 0.21774784744865,
+            "mean": 0.2015,
+            "std": 0.0031,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 85,
+            "min": -1.0,
+            "max": 0.213000000000001,
+            "mean": 0.1965,
+            "std": 0.0692,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7615
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 3683
+      },
+      {
+        "file_name": "p10-1.2ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\AR-onlineTraining\\p10-1.2ml.csv",
+        "file_size_bytes": 254063,
+        "file_size_mb": 0.242,
+        "total_rows_inspected": 8375,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5549,
+            "min": 0.0,
+            "max": 1.22281444169422,
+            "mean": 1.2041,
+            "std": 0.0235,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 51,
+            "min": -1.0,
+            "max": 1.229,
+            "mean": 1.1921,
+            "std": 0.1271,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5565
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 2725
+      },
+      {
+        "file_name": "p10-2.0ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\AR-onlineTraining\\p10-2.0ml.csv",
+        "file_size_bytes": 288362,
+        "file_size_mb": 0.275,
+        "total_rows_inspected": 9519,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6291,
+            "min": 0.0,
+            "max": 2.03954615728674,
+            "mean": 2.0055,
+            "std": 0.0214,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 47,
+            "min": -1.0,
+            "max": 2.018,
+            "mean": 1.9875,
+            "std": 0.1736,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6313
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 3121
+      },
+      {
+        "file_name": "6neur-0.1ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\GRU-onlineTraining\\6neur-0.1ml.csv",
+        "file_size_bytes": 96019,
+        "file_size_mb": 0.092,
+        "total_rows_inspected": 2372,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1565,
+            "min": 0.0,
+            "max": 0.120918019275783,
+            "mean": 0.101,
+            "std": 0.0031,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 56,
+            "min": -1.0,
+            "max": 0.109,
+            "mean": 0.0963,
+            "std": 0.0639,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1571
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 742
+      },
+      {
+        "file_name": "6neur-0.3ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\GRU-onlineTraining\\6neur-0.3ml.csv",
+        "file_size_bytes": 214598,
+        "file_size_mb": 0.205,
+        "total_rows_inspected": 5719,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 3785,
+            "min": 0.0,
+            "max": 0.315830697901621,
+            "mean": 0.3003,
+            "std": 0.0046,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 88,
+            "min": -1.0,
+            "max": 0.321000000000002,
+            "mean": 0.297,
+            "std": 0.075,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 3803
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 1806
+      },
+      {
+        "file_name": "6neur-1.2ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\GRU-onlineTraining\\6neur-1.2ml.csv",
+        "file_size_bytes": 140665,
+        "file_size_mb": 0.134,
+        "total_rows_inspected": 4756,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 3099,
+            "min": 0.0,
+            "max": 1.22733981255112,
+            "mean": 1.2051,
+            "std": 0.0253,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 43,
+            "min": -1.0,
+            "max": 1.221,
+            "mean": 1.1907,
+            "std": 0.1274,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 3114
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 1548
+      },
+      {
+        "file_name": "10neur-Vc+V+IncrAv-0.3ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\GRU-preTrained\\10neur-Vc+V+IncrAv-0.3ml.csv",
+        "file_size_bytes": 338932,
+        "file_size_mb": 0.323,
+        "total_rows_inspected": 8990,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5915,
+            "min": 0.293743623111526,
+            "max": 0.309279519613304,
+            "mean": 0.3008,
+            "std": 0.002,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 88,
+            "min": -1.0,
+            "max": 0.314,
+            "mean": 0.2953,
+            "std": 0.0738,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5942
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 2882
+      },
+      {
+        "file_name": "10neur-Vc+V+IncrAv-1.2ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\GRU-preTrained\\10neur-Vc+V+IncrAv-1.2ml.csv",
+        "file_size_bytes": 269845,
+        "file_size_mb": 0.257,
+        "total_rows_inspected": 9120,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5898,
+            "min": 0.0,
+            "max": 1.22061538002504,
+            "mean": 1.2045,
+            "std": 0.0137,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 39,
+            "min": -1.0,
+            "max": 1.217,
+            "mean": 1.1916,
+            "std": 0.126,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5928
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 3014
+      },
+      {
+        "file_name": "8neur-V+IncrAv-1.2ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\GRU-preTrained\\8neur-V+IncrAv-1.2ml.csv",
+        "file_size_bytes": 214174,
+        "file_size_mb": 0.204,
+        "total_rows_inspected": 7224,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 4733,
+            "min": 0.0,
+            "max": 1.22130329515262,
+            "mean": 1.2036,
+            "std": 0.0251,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 49,
+            "min": -1.0,
+            "max": 1.235,
+            "mean": 1.1923,
+            "std": 0.1267,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 4754
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 2335
+      },
+      {
+        "file_name": "6neur-Vc+V+IncrAv-1.2ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\LSTM-preTrained\\6neur-Vc+V+IncrAv-1.2ml.csv",
+        "file_size_bytes": 267832,
+        "file_size_mb": 0.255,
+        "total_rows_inspected": 9022,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5885,
+            "min": 0.0,
+            "max": 1.22051388889713,
+            "mean": 1.2049,
+            "std": 0.0139,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 48,
+            "min": -1.0,
+            "max": 1.228,
+            "mean": 1.1913,
+            "std": 0.1267,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5914
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 2922
+      },
+      {
+        "file_name": "8neur-V+IncrAv-0.3ml.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\LSTM-preTrained\\8neur-V+IncrAv-0.3ml.csv",
+        "file_size_bytes": 293519,
+        "file_size_mb": 0.28,
+        "total_rows_inspected": 7826,
+        "total_columns": 3,
+        "columns": [
+          "Set volume",
+          "Actual weight",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "Set volume": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5159,
+            "min": 0.0,
+            "max": 0.309278435540463,
+            "mean": 0.3008,
+            "std": 0.004,
+            "has_infinite": false
+          },
+          "Actual weight": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 66,
+            "min": -1.0,
+            "max": 0.314000000000002,
+            "mean": 0.2957,
+            "std": 0.0749,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5183
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 2522
+      },
+      {
+        "file_name": "0.3 ml-AR10-ADCS-active.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\training-data\\0.3 ml-AR10-ADCS-active.csv",
+        "file_size_bytes": 233895,
+        "file_size_mb": 0.223,
+        "total_rows_inspected": 6228,
+        "total_columns": 3,
+        "columns": [
+          "V_c",
+          "p [g]",
+          "Prediction"
+        ],
+        "column_profiles": {
+          "V_c": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6197,
+            "min": 0.28430738,
+            "max": 0.315618463,
+            "mean": 0.3045,
+            "std": 0.0034,
+            "has_infinite": false
+          },
+          "p [g]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6208,
+            "min": 0.286551648,
+            "max": 0.313515753,
+            "mean": 0.3004,
+            "std": 0.0036,
+            "has_infinite": false
+          },
+          "Prediction": {
+            "dtype": "str",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6206
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "1.2 ml-AR10-ADCS-active.csv",
+        "relative_path": "raw\\dosepi\\dosepi-datasets\\compensated\\training-data\\1.2 ml-AR10-ADCS-active.csv",
+        "file_size_bytes": 103915,
+        "file_size_mb": 0.099,
+        "total_rows_inspected": 5547,
+        "total_columns": 2,
+        "columns": [
+          "V_c",
+          "p [g]"
+        ],
+        "column_profiles": {
+          "V_c": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 5546,
+            "min": 1.179862177,
+            "max": 1.222814442,
+            "mean": 1.2068,
+            "std": 0.0057,
+            "has_infinite": false
+          },
+          "p [g]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 38,
+            "min": 1.164,
+            "max": 1.218,
+            "mean": 1.1995,
+            "std": 0.005,
+            "has_infinite": false
+          }
+        },
+        "timestamp_analysis": {},
+        "duplicate_rows": 0
+      }
+    ],
+    "status": "ACQUIRED",
+    "total_size_mb": 4.567
+  },
+  "pressure_occlusion": {
+    "id": "pressure_occlusion",
+    "name": "Multi-infusion with integrated multiple pressure sensing allows earlier detection of line occlusions",
+    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8555317/",
+    "doi": "10.3390/s21206934",
+    "purpose": "Pressure behaviour, normal infusion patterns, genuine occlusion events, pressure anomaly analysis.",
+    "type": "In vitro multi-infusion clinical pressure-event research study.",
+    "sensors_supported": [
+      "pressure"
+    ],
+    "files": [],
+    "status": "NOT_ACQUIRED",
+    "total_size_mb": 0.0
+  },
+  "force_failure": {
+    "id": "force_failure",
+    "name": "Development of a Real-time Force-based Algorithm for Infusion Failure Detection",
+    "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11535327/",
+    "doi": "10.1177/19322968241247530",
+    "purpose": "Pressure and force relationships, infusion failure classification, cross-sensor consistency analysis.",
+    "type": "In vitro force and line-pressure experimental failure study.",
+    "sensors_supported": [
+      "force",
+      "pressure"
+    ],
+    "files": [],
+    "status": "NOT_ACQUIRED",
+    "total_size_mb": 0.0
+  },
+  "smart_pump_logs": {
+    "id": "smart_pump_logs",
+    "name": "Hospitals Infusion Data Set: Spain (Determinants of Intravenous Infusion Longevity and Infusion Failure)",
+    "paper_url": "https://ai.jmir.org/2023/1/e48628/",
+    "doi": "10.2196/48628",
+    "purpose": "Infusion operating conditions, pump event information, occlusion and infusion termination context.",
+    "type": "Retrospective hospital smart pump event logs (operational discrete events, not continuous raw waveforms).",
+    "sensors_supported": [
+      "event_logs",
+      "operating_conditions",
+      "alarm_records"
+    ],
+    "files": [],
+    "status": "NOT_ACQUIRED",
+    "total_size_mb": 0.0
+  },
+  "sensor_defects": {
+    "id": "sensor_defects",
+    "name": "Typical Sensor Defects Dataset",
+    "paper_url": "https://zenodo.org/records/56358",
+    "doi": "10.5281/zenodo.56358",
+    "purpose": "Sensor drift, offset, noise, peaks and abnormal sensor behaviour benchmark.",
+    "type": "Generic multi-sensor defect benchmark dataset (hazardous material storage container, not an infusion pump).",
+    "sensors_supported": [
+      "temperature",
+      "smoke_defect_channels"
+    ],
+    "files": [
+      {
+        "file_name": "Configuration.pdf",
+        "relative_path": "raw\\sensor_defects\\Configuration.pdf",
+        "file_size_bytes": 60828,
+        "file_size_mb": 0.058,
+        "format": ".pdf"
+      },
+      {
+        "file_name": "data.zip",
+        "relative_path": "raw\\sensor_defects\\data.zip",
+        "file_size_bytes": 4046559,
+        "file_size_mb": 3.859,
+        "format": ".zip"
+      },
+      {
+        "file_name": "data_drift_0_001.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_drift_0_001.csv",
+        "file_size_bytes": 6802773,
+        "file_size_mb": 6.488,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 354,
+            "min": 19.5,
+            "max": 20.271,
+            "mean": 19.8974,
+            "std": 0.2594,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_drift_0_0025.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_drift_0_0025.csv",
+        "file_size_bytes": 6802339,
+        "file_size_mb": 6.487,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 822,
+            "min": 19.5,
+            "max": 20.677,
+            "mean": 20.1005,
+            "std": 0.3744,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_drift_0_005.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_drift_0_005.csv",
+        "file_size_bytes": 6802497,
+        "file_size_mb": 6.487,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1530,
+            "min": 19.5,
+            "max": 21.354,
+            "mean": 20.439,
+            "std": 0.5682,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_noise_0dB.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_noise_0dB.csv",
+        "file_size_bytes": 6802765,
+        "file_size_mb": 6.488,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1998,
+            "min": 18.502,
+            "max": 21.142,
+            "mean": 19.7615,
+            "std": 0.3386,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_noise_10dB.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_noise_10dB.csv",
+        "file_size_bytes": 6802517,
+        "file_size_mb": 6.487,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1012,
+            "min": 19.123,
+            "max": 20.337,
+            "mean": 19.7617,
+            "std": 0.2045,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_offset_1.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_offset_1.csv",
+        "file_size_bytes": 6628806,
+        "file_size_mb": 6.322,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6,
+            "min": 20.5,
+            "max": 21.0,
+            "mean": 20.762,
+            "std": 0.1843,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_offset_2.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_offset_2.csv",
+        "file_size_bytes": 6628806,
+        "file_size_mb": 6.322,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6,
+            "min": 21.5,
+            "max": 22.0,
+            "mean": 21.762,
+            "std": 0.1843,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_offset_5.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_offset_5.csv",
+        "file_size_bytes": 6628806,
+        "file_size_mb": 6.322,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6,
+            "min": 24.5,
+            "max": 25.0,
+            "mean": 24.762,
+            "std": 0.1843,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_peak_1.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_peak_1.csv",
+        "file_size_bytes": 6630014,
+        "file_size_mb": 6.323,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 19.5,
+            "max": 120.0,
+            "mean": 21.428,
+            "std": 12.8008,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_peak_10.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_peak_10.csv",
+        "file_size_bytes": 6640891,
+        "file_size_mb": 6.333,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 19.5,
+            "max": 120.0,
+            "mean": 36.43,
+            "std": 37.2699,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_peak_2.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_peak_2.csv",
+        "file_size_bytes": 6631222,
+        "file_size_mb": 6.324,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 19.5,
+            "max": 120.0,
+            "mean": 23.096,
+            "std": 17.9533,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_peak_5.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_peak_5.csv",
+        "file_size_bytes": 6634847,
+        "file_size_mb": 6.327,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 19.5,
+            "max": 120.0,
+            "mean": 28.1,
+            "std": 27.6464,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      },
+      {
+        "file_name": "data_standard.csv",
+        "relative_path": "raw\\sensor_defects\\extracted\\data_standard.csv",
+        "file_size_bytes": 6628806,
+        "file_size_mb": 6.322,
+        "total_rows_inspected": 50000,
+        "total_columns": 24,
+        "columns": [
+          "Time [sec]",
+          "Smoke_Inside_0",
+          "Smoke_Ventilation_In",
+          "Leakage_0",
+          "Leakage_1",
+          "Pressure_Ventilation_Out",
+          "Smoke_Ventilation_Out",
+          "Smoke_Inside_1",
+          "Gas_Ventilation_Out",
+          "Temp_Outside_0 [\u00b0C]",
+          "Temp_Outside_1 [\u00b0C]",
+          "Temp_Ventilation_Out [\u00b0C]",
+          "Temp_Inside_3 [\u00b0C]",
+          "Temp_Inside_0 [\u00b0C]",
+          "Temp_Inside_1 [\u00b0C]",
+          "Temp_Inside_2 [\u00b0C]",
+          "Temp_Inside_4 [\u00b0C]",
+          "Temp_Ventilation_In [\u00b0C]",
+          "Temp_Inside_6 [\u00b0C]",
+          "Temp_Inside_7 [\u00b0C]",
+          "Temp_Inside_9 [\u00b0C]",
+          "Temp_Inside_8 [\u00b0C]",
+          "Temp_Inside_5 [\u00b0C]",
+          "Unnamed: 23"
+        ],
+        "column_profiles": {
+          "Time [sec]": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 50000,
+            "min": 0.0,
+            "max": 49999.0,
+            "mean": 24999.5,
+            "std": 14433.9011,
+            "has_infinite": false
+          },
+          "Smoke_Inside_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_In": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_0": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Leakage_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Pressure_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Ventilation_Out": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Smoke_Inside_1": {
+            "dtype": "int64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Gas_Ventilation_Out": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 1,
+            "min": 43.6,
+            "max": 43.6,
+            "mean": 43.6,
+            "std": 0.0,
+            "has_infinite": false
+          },
+          "Temp_Outside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.5,
+            "max": 21.6,
+            "mean": 21.1114,
+            "std": 0.2666,
+            "has_infinite": false
+          },
+          "Temp_Outside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 12,
+            "min": 20.8,
+            "max": 21.9,
+            "mean": 21.415,
+            "std": 0.2688,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_Out [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.8019,
+            "std": 0.2139,
+            "has_infinite": false
+          },
+          "Temp_Inside_3 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9159,
+            "std": 0.2254,
+            "has_infinite": false
+          },
+          "Temp_Inside_0 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8768,
+            "std": 0.2162,
+            "has_infinite": false
+          },
+          "Temp_Inside_1 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.4,
+            "max": 20.1,
+            "mean": 19.7897,
+            "std": 0.2173,
+            "has_infinite": false
+          },
+          "Temp_Inside_2 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 6,
+            "min": 19.5,
+            "max": 20.0,
+            "mean": 19.762,
+            "std": 0.1843,
+            "has_infinite": false
+          },
+          "Temp_Inside_4 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.5,
+            "max": 20.1,
+            "mean": 19.7783,
+            "std": 0.2156,
+            "has_infinite": false
+          },
+          "Temp_Ventilation_In [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.6,
+            "max": 20.3,
+            "mean": 19.9467,
+            "std": 0.2321,
+            "has_infinite": false
+          },
+          "Temp_Inside_6 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8867,
+            "std": 0.2224,
+            "has_infinite": false
+          },
+          "Temp_Inside_7 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.8597,
+            "std": 0.2056,
+            "has_infinite": false
+          },
+          "Temp_Inside_9 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.3,
+            "max": 19.9,
+            "mean": 19.6015,
+            "std": 0.2075,
+            "has_infinite": false
+          },
+          "Temp_Inside_8 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 7,
+            "min": 19.6,
+            "max": 20.2,
+            "mean": 19.9034,
+            "std": 0.2184,
+            "has_infinite": false
+          },
+          "Temp_Inside_5 [\u00b0C]": {
+            "dtype": "float64",
+            "null_count": 0,
+            "null_pct": 0.0,
+            "unique_values": 8,
+            "min": 19.3,
+            "max": 20.0,
+            "mean": 19.6109,
+            "std": 0.227,
+            "has_infinite": false
+          },
+          "Unnamed: 23": {
+            "dtype": "float64",
+            "null_count": 50000,
+            "null_pct": 100.0,
+            "unique_values": 0
+          }
+        },
+        "timestamp_analysis": {
+          "column_identified": "Time [sec]",
+          "sampling_interval_median": 1.0,
+          "sampling_interval_min": 1.0,
+          "sampling_interval_max": 1.0,
+          "is_strictly_monotonic": true
+        },
+        "duplicate_rows": 0
+      }
+    ],
+    "status": "ACQUIRED",
+    "total_size_mb": 86.949
+  }
+}

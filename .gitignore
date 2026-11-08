@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables
+.env
+
+# Large raw & processed data (preserve dir structure)
+data/raw/*
+!data/raw/**/.gitkeep
+!data/raw/**/README.md
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/synthetic/*
+!data/synthetic/.gitkeep
+data/custom/*
+!data/custom/.gitkeep
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Test & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Operating System
+Thumbs.db
+Desktop.ini
+.DS_Store
+

@@ -1,0 +1,256 @@
+{
+  "evaluation_summary": {
+    "model_version": "Phase 4.2 (Adaptive Baseline + Temperature Calibrated + Split Conformal)",
+    "feature_count": 27,
+    "features": [
+      "p_raw",
+      "p_roll_mean_15",
+      "p_roll_std_15",
+      "p_roll_slope_15",
+      "p_roll_mean_60",
+      "p_roll_std_60",
+      "p_roll_slope_60",
+      "p_roll_variance_60",
+      "p_rate_of_change",
+      "p_acceleration",
+      "p_dt_residual",
+      "p_deviation_from_baseline",
+      "baseline_confidence",
+      "signal_quality_index",
+      "p_flow_hydraulic_consistency",
+      "force_raw",
+      "force_expected_from_p",
+      "force_hydraulic_residual",
+      "flow_raw",
+      "flow_delivery_error",
+      "temp_raw",
+      "temp_roll_delta_60",
+      "sensor_freeze_counter",
+      "sensor_dropout_counter",
+      "has_force_channel",
+      "has_flow_channel",
+      "has_temp_channel"
+    ]
+  },
+  "phase_comparison": {
+    "Phase4_InDistribution": {
+      "balanced_accuracy": 0.9748,
+      "macro_f1": 0.9778,
+      "normal_false_alarm_rate": 0.0173,
+      "normal_far_per_hour": 62.28,
+      "ece": 0.0812,
+      "regression_rmse_mmhg": 1.9369
+    },
+    "Phase4_1_OOD_Audit_Legacy_Model": {
+      "balanced_accuracy": 0.7911,
+      "macro_f1": 0.7748,
+      "normal_false_alarm_rate": 0.1967,
+      "normal_far_per_hour": 708.09,
+      "ece": 0.1506,
+      "regression_rmse_mmhg": 2.7465
+    },
+    "Phase4_2_Standard_Test": {
+      "balanced_accuracy": 0.837349950642704,
+      "macro_f1": 0.8692774036025855,
+      "normal_false_alarm_rate": 0.008344534050179212,
+      "normal_far_per_hour": 0.021,
+      "brier_score_raw": 0.19132,
+      "brier_score_calibrated": 0.18517,
+      "ece_raw": 0.0565,
+      "ece_calibrated": 0.0164,
+      "regression_mae_mmhg": 0.14437817127037192,
+      "regression_rmse_mmhg": 0.35620658323617543,
+      "conformal_coverage": 0.9995,
+      "conformal_halfwidth_mmhg": 3.857
+    },
+    "Phase4_2_OOD_Stress_Test": {
+      "balanced_accuracy": 0.8485582077158376,
+      "macro_f1": 0.8192295067029032,
+      "normal_false_alarm_rate": 0.43481182795698925,
+      "normal_far_per_hour": 1.087,
+      "ece_calibrated": 0.0454,
+      "conformal_coverage": 0.9582
+    }
+  },
+  "classification_reports": {
+    "test_set": {
+      "NORMAL": {
+        "precision": 0.8140924848050168,
+        "recall": 0.9916554659498208,
+        "f1-score": 0.8941439053087111,
+        "support": 89280.0
+      },
+      "POSITIVE_DRIFT": {
+        "precision": 0.7519875896839248,
+        "recall": 0.6875886524822695,
+        "f1-score": 0.7183476891729184,
+        "support": 16920.0
+      },
+      "NEGATIVE_DRIFT": {
+        "precision": 0.9870883505005078,
+        "recall": 0.4021276595744681,
+        "f1-score": 0.5714525679250829,
+        "support": 16920.0
+      },
+      "SUDDEN_OFFSET": {
+        "precision": 0.9226512308377329,
+        "recall": 0.8058333333333333,
+        "f1-score": 0.8602947718039204,
+        "support": 18000.0
+      },
+      "EXCESSIVE_NOISE": {
+        "precision": 0.9627870766835345,
+        "recall": 0.6870555555555555,
+        "f1-score": 0.801880369589885,
+        "support": 18000.0
+      },
+      "SENSOR_FREEZE": {
+        "precision": 1.0,
+        "recall": 0.9963333333333333,
+        "f1-score": 0.9981632993822007,
+        "support": 18000.0
+      },
+      "SENSOR_DROPOUT": {
+        "precision": 1.0,
+        "recall": 0.9929444444444444,
+        "f1-score": 0.9964597329467845,
+        "support": 18000.0
+      },
+      "GENUINE_OCCLUSION": {
+        "precision": 0.9996655518394649,
+        "recall": 0.9963333333333333,
+        "f1-score": 0.9979966611018364,
+        "support": 18000.0
+      },
+      "TEMPERATURE_INFLUENCE": {
+        "precision": 0.9933860938383268,
+        "recall": 0.9762777777777778,
+        "f1-score": 0.9847576351919305,
+        "support": 18000.0
+      },
+      "accuracy": 0.8876730702665282,
+      "macro avg": {
+        "precision": 0.9368509309098343,
+        "recall": 0.837349950642704,
+        "f1-score": 0.8692774036025855,
+        "support": 231120.0
+      },
+      "weighted avg": {
+        "precision": 0.8996199424926254,
+        "recall": 0.8876730702665282,
+        "f1-score": 0.8790434954844148,
+        "support": 231120.0
+      }
+    },
+    "ood_stress_set": {
+      "NORMAL": {
+        "precision": 0.8545734753670805,
+        "recall": 0.5651881720430108,
+        "f1-score": 0.6803886008616098,
+        "support": 89280.0
+      },
+      "POSITIVE_DRIFT": {
+        "precision": 0.3247252083584974,
+        "recall": 0.7944444444444444,
+        "f1-score": 0.4610134613735746,
+        "support": 16920.0
+      },
+      "NEGATIVE_DRIFT": {
+        "precision": 0.3739490775789935,
+        "recall": 0.5546690307328606,
+        "f1-score": 0.4467239450698527,
+        "support": 16920.0
+      },
+      "SUDDEN_OFFSET": {
+        "precision": 0.9680629208127272,
+        "recall": 0.9026111111111111,
+        "f1-score": 0.9341919903401087,
+        "support": 18000.0
+      },
+      "EXCESSIVE_NOISE": {
+        "precision": 0.9097052312711174,
+        "recall": 0.8675555555555555,
+        "f1-score": 0.8881305806745151,
+        "support": 18000.0
+      },
+      "SENSOR_FREEZE": {
+        "precision": 0.9971609886439545,
+        "recall": 0.9951666666666666,
+        "f1-score": 0.9961628294961629,
+        "support": 18000.0
+      },
+      "SENSOR_DROPOUT": {
+        "precision": 0.9998320174701831,
+        "recall": 0.992,
+        "f1-score": 0.995900610725341,
+        "support": 18000.0
+      },
+      "GENUINE_OCCLUSION": {
+        "precision": 0.9971111111111111,
+        "recall": 0.9971111111111111,
+        "f1-score": 0.9971111111111111,
+        "support": 18000.0
+      },
+      "TEMPERATURE_INFLUENCE": {
+        "precision": 0.9786624740299849,
+        "recall": 0.9682777777777778,
+        "f1-score": 0.9734424306738529,
+        "support": 18000.0
+      },
+      "accuracy": 0.7627898926964347,
+      "macro avg": {
+        "precision": 0.822642500515961,
+        "recall": 0.8485582077158376,
+        "f1-score": 0.8192295067029032,
+        "support": 231120.0
+      },
+      "weighted avg": {
+        "precision": 0.8369137858209532,
+        "recall": 0.7627898926964347,
+        "f1-score": 0.7798240011955995,
+        "support": 231120.0
+      }
+    }
+  },
+  "conformal_uncertainty_evaluation": {
+    "target_nominal_coverage": 0.95,
+    "conformal_prediction": {
+      "empirical_coverage": 0.9995,
+      "interval_width_mmhg": 7.715,
+      "halfwidth_mmhg": 3.857
+    },
+    "asymmetric_empirical_quantile": {
+      "empirical_coverage": 0.9944,
+      "interval_width_mmhg": 14.141,
+      "bounds_mmhg": [
+        -1.154,
+        12.987
+      ]
+    },
+    "naive_gaussian_comparison": {
+      "empirical_coverage": 0.9556,
+      "interval_width_mmhg": 1.396,
+      "rmse_mmhg": 0.356
+    },
+    "subgroup_coverage": {
+      "baseline_15.0_mmhg": {
+        "samples": 77040,
+        "conformal_coverage": 0.9995
+      },
+      "baseline_40.0_mmhg": {
+        "samples": 77040,
+        "conformal_coverage": 0.9995
+      },
+      "baseline_65.0_mmhg": {
+        "samples": 77040,
+        "conformal_coverage": 0.9996
+      }
+    }
+  },
+  "figures_generated": [
+    "D:\\techgium\\reports\\figures\\phase4_2_calibration_comparison.png",
+    "D:\\techgium\\reports\\figures\\phase4_2_ood_confusion_matrix.png",
+    "D:\\techgium\\reports\\figures\\phase4_2_conformal_coverage.png",
+    "D:\\techgium\\reports\\figures\\phase4_2_adaptive_baseline_tracking.png"
+  ]
+}

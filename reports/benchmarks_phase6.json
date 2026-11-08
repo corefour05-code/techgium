@@ -1,0 +1,100 @@
+{
+  "benchmark_timestamp_utc": "2026-11-08T10:59:09Z",
+  "provenance": "SYNTHETIC_DATA",
+  "device_target": "Infusion Pump ML Integration",
+  "system_specs": {
+    "os": "win32",
+    "python_version": "3.12.7",
+    "cpu_cores": 16,
+    "total_ram_gb": 15.71
+  },
+  "model_loading": {
+    "load_time_sec": 0.4431,
+    "memory_initial_mb": 217.17,
+    "memory_post_load_mb": 373.5,
+    "model_memory_footprint_mb": 156.32
+  },
+  "single_request_latencies": {
+    "predict_fault": {
+      "mean_ms": 21.69,
+      "median_ms": 21.41,
+      "min_ms": 19.98,
+      "max_ms": 26.86,
+      "p95_ms": 23.33,
+      "p99_ms": 26.85
+    },
+    "predict_sensor_error": {
+      "mean_ms": 11.35,
+      "median_ms": 11.33,
+      "min_ms": 10.73,
+      "max_ms": 12.77,
+      "p95_ms": 11.92,
+      "p99_ms": 12.66
+    },
+    "predict_sensor_health": {
+      "mean_ms": 10.1,
+      "median_ms": 9.4,
+      "min_ms": 7.28,
+      "max_ms": 13.73,
+      "p95_ms": 13.54,
+      "p99_ms": 13.68
+    }
+  },
+  "sequential_streaming_benchmarks": {
+    "total_samples": 500,
+    "overall_latency": {
+      "mean_ms": 16.43,
+      "median_ms": 16.58,
+      "min_ms": 0.02,
+      "max_ms": 28.22,
+      "p95_ms": 18.52,
+      "p99_ms": 23.88
+    },
+    "warmup_phase_latency": {
+      "mean_ms": 0.04,
+      "median_ms": 0.02,
+      "min_ms": 0.02,
+      "max_ms": 0.21,
+      "p95_ms": 0.1,
+      "p99_ms": 0.19
+    },
+    "steady_state_latency": {
+      "mean_ms": 16.9,
+      "median_ms": 16.61,
+      "min_ms": 14.71,
+      "max_ms": 28.22,
+      "p95_ms": 18.6,
+      "p99_ms": 23.99
+    },
+    "memory_before_mb": 376.44,
+    "memory_after_mb": 377.92,
+    "memory_growth_mb": 1.48,
+    "session_final_buffer_size": 120
+  },
+  "batch_throughput_benchmarks": {
+    "batch_20": {
+      "batch_size": 20,
+      "elapsed_sec": 0.4456,
+      "throughput_samples_per_sec": 44.9,
+      "avg_per_sample_ms": 22.28
+    },
+    "batch_50": {
+      "batch_size": 50,
+      "elapsed_sec": 1.112,
+      "throughput_samples_per_sec": 45.0,
+      "avg_per_sample_ms": 22.24
+    },
+    "batch_100": {
+      "batch_size": 100,
+      "elapsed_sec": 2.2005,
+      "throughput_samples_per_sec": 45.4,
+      "avg_per_sample_ms": 22.0
+    }
+  },
+  "memory_summary": {
+    "initial_mb": 217.17,
+    "post_load_mb": 373.5,
+    "post_streaming_mb": 377.95,
+    "net_growth_during_stream_mb": 4.46
+  }
+}
