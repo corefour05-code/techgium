@@ -1,8 +1,8 @@
 """Pydantic request and response schemas for Infusion Pump ML REST API."""
 
 from datetime import datetime
-from typing import Dict, Any, List, Optional
-from pydantic import BaseModel, Field
+from typing import Dict, Any, List, Optional, Union
+from pydantic import BaseModel, Field, field_validator
 
 
 class HealthResponse(BaseModel):
@@ -25,13 +25,32 @@ class ModelStatusResponse(BaseModel):
 
 class FaultPredictionRequest(BaseModel):
     """Payload for real-time sensor fault classification."""
+    session_id: Optional[str] = Field("pump_01", description="Optional session identifier")
+    timestamp: Optional[float] = Field(None, description="Optional timestamp")
     sensor_id: str = Field("PRESS_LINE_01", description="Identifier of the target sensor transducer")
-    sensor_pressure_mmhg: List[float] = Field(..., min_length=1, description="Window of pressure readings (mmHg)")
-    sensor_force_n: Optional[List[float]] = Field(None, description="Optional plunger force readings (N)")
-    sensor_flow_ml_h: Optional[List[float]] = Field(None, description="Optional measured delivery flow (mL/h)")
-    sensor_temperature_c: Optional[List[float]] = Field(None, description="Optional ambient temperature readings (°C)")
+    sensor_pressure_mmhg: Union[float, List[float]] = Field(..., description="Window or reading of pressure (mmHg)")
+    sensor_force_n: Optional[Union[float, List[float]]] = Field(None, description="Optional plunger force readings (N)")
+    sensor_flow_ml_h: Optional[Union[float, List[float]]] = Field(None, description="Optional measured delivery flow (mL/h)")
+    sensor_temperature_c: Optional[Union[float, List[float]]] = Field(None, description="Optional ambient temperature readings (°C)")
     commanded_rate_ml_h: Optional[float] = Field(50.0, description="Pump commanded infusion rate setpoint (mL/h)")
     dt_predicted_pressure_mmhg: Optional[float] = Field(None, description="Digital Twin expected line pressure (mmHg)")
+
+    @field_validator(
+        "sensor_pressure_mmhg",
+        "sensor_force_n",
+        "sensor_flow_ml_h",
+        "sensor_temperature_c",
+        mode="before",
+    )
+    @classmethod
+    def coerce_to_list(cls, v):
+        if v is None:
+            return None
+        if isinstance(v, (int, float)):
+            return [float(v)]
+        if isinstance(v, list) and len(v) == 0:
+            raise ValueError("Input list cannot be empty")
+        return v
 
 
 class FaultPredictionResponse(BaseModel):
@@ -51,16 +70,35 @@ class FaultPredictionResponse(BaseModel):
 
 class SensorErrorRequest(BaseModel):
     """Payload for measurement error estimation."""
+    session_id: Optional[str] = Field("pump_01", description="Optional session identifier")
+    timestamp: Optional[float] = Field(None, description="Optional timestamp")
     sensor_id: str = Field("PRESS_LINE_01", description="Transducer identifier")
     sensor_type: str = Field("pressure", description="Sensor type: 'pressure', 'flow'")
-    sensor_pressure_mmhg: List[float] = Field(..., min_length=1, description="Recent pressure signal window")
+    sensor_pressure_mmhg: Union[float, List[float]] = Field(..., description="Recent pressure signal window")
     observed_sensor_value: Optional[float] = Field(None, description="Current uncompensated sensor reading")
     independent_reference_value: Optional[float] = Field(None, description="Independent physical reference reading")
-    sensor_force_n: Optional[List[float]] = None
-    sensor_flow_ml_h: Optional[List[float]] = None
-    sensor_temperature_c: Optional[List[float]] = None
+    sensor_force_n: Optional[Union[float, List[float]]] = None
+    sensor_flow_ml_h: Optional[Union[float, List[float]]] = None
+    sensor_temperature_c: Optional[Union[float, List[float]]] = None
     commanded_rate_ml_h: Optional[float] = 50.0
     dt_predicted_pressure_mmhg: Optional[float] = None
+
+    @field_validator(
+        "sensor_pressure_mmhg",
+        "sensor_force_n",
+        "sensor_flow_ml_h",
+        "sensor_temperature_c",
+        mode="before",
+    )
+    @classmethod
+    def coerce_to_list(cls, v):
+        if v is None:
+            return None
+        if isinstance(v, (int, float)):
+            return [float(v)]
+        if isinstance(v, list) and len(v) == 0:
+            raise ValueError("Input list cannot be empty")
+        return v
 
 
 class SensorErrorResponse(BaseModel):
@@ -80,16 +118,35 @@ class SensorErrorResponse(BaseModel):
 
 class SensorHealthRequest(BaseModel):
     """Payload for integrated sensor health and process risk scoring."""
+    session_id: Optional[str] = Field("pump_01", description="Optional session identifier")
+    timestamp: Optional[float] = Field(None, description="Optional timestamp")
     sensor_id: str = Field("PRESS_LINE_01", description="Target sensor identifier")
     sensor_type: str = Field("pressure", description="Type of sensor channel")
-    sensor_pressure_mmhg: List[float] = Field(..., min_length=1, description="Time-series pressure window")
-    sensor_force_n: Optional[List[float]] = None
-    sensor_flow_ml_h: Optional[List[float]] = None
-    sensor_temperature_c: Optional[List[float]] = None
+    sensor_pressure_mmhg: Union[float, List[float]] = Field(..., description="Time-series pressure window")
+    sensor_force_n: Optional[Union[float, List[float]]] = None
+    sensor_flow_ml_h: Optional[Union[float, List[float]]] = None
+    sensor_temperature_c: Optional[Union[float, List[float]]] = None
     commanded_rate_ml_h: Optional[float] = 50.0
     dt_predicted_pressure_mmhg: Optional[float] = None
     observed_sensor_value: Optional[float] = None
     independent_reference_value: Optional[float] = None
+
+    @field_validator(
+        "sensor_pressure_mmhg",
+        "sensor_force_n",
+        "sensor_flow_ml_h",
+        "sensor_temperature_c",
+        mode="before",
+    )
+    @classmethod
+    def coerce_to_list(cls, v):
+        if v is None:
+            return None
+        if isinstance(v, (int, float)):
+            return [float(v)]
+        if isinstance(v, list) and len(v) == 0:
+            raise ValueError("Input list cannot be empty")
+        return v
 
 
 class SensorHealthResponse(BaseModel):
@@ -136,14 +193,59 @@ class SequentialObservationRequest(BaseModel):
     session_id: str = Field("pump_session_01", min_length=1, description="Unique session/channel identifier for stateful buffering")
     sensor_id: str = Field("PRESS_LINE_01", min_length=1, description="Identifier of the target sensor transducer")
     timestamp: float = Field(..., description="Timestamp in seconds (epoch or relative)")
-    sensor_pressure_mmhg: float = Field(..., ge=-50.0, le=2000.0, description="Current transducer pressure reading (mmHg)")
-    sensor_force_n: Optional[float] = Field(None, ge=0.0, le=200.0, description="Optional measured plunger force (N)")
-    sensor_flow_ml_h: Optional[float] = Field(None, ge=0.0, le=2000.0, description="Optional measured delivery flow (mL/h)")
-    sensor_temperature_c: Optional[float] = Field(None, ge=-20.0, le=100.0, description="Optional ambient temperature (°C)")
+    sensor_pressure_mmhg: Union[float, List[float]] = Field(..., description="Current transducer pressure reading (mmHg)")
+    sensor_force_n: Optional[Union[float, List[float]]] = Field(None, description="Optional measured plunger force (N)")
+    sensor_flow_ml_h: Optional[Union[float, List[float]]] = Field(None, description="Optional measured delivery flow (mL/h)")
+    sensor_temperature_c: Optional[Union[float, List[float]]] = Field(None, description="Optional ambient temperature (°C)")
     commanded_rate_ml_h: float = Field(50.0, ge=0.0, le=1500.0, description="Pump delivery setpoint (mL/h)")
     dt_predicted_pressure_mmhg: Optional[float] = Field(None, description="Digital Twin expected line pressure (mmHg)")
     independent_reference_value: Optional[float] = Field(None, description="Independent physical reference reading (if available)")
     baseline_pressure_mmhg: Optional[float] = Field(None, description="Optional known catheter baseline pressure (mmHg)")
+
+    @field_validator(
+        "sensor_pressure_mmhg",
+        "sensor_force_n",
+        "sensor_flow_ml_h",
+        "sensor_temperature_c",
+        mode="before",
+    )
+    @classmethod
+    def coerce_to_scalar(cls, v):
+        if v is None:
+            return None
+        if isinstance(v, list):
+            if len(v) == 0:
+                raise ValueError("Input list cannot be empty")
+            return float(v[-1])
+        return float(v)
+
+    @field_validator("sensor_pressure_mmhg")
+    @classmethod
+    def validate_pressure_bounds(cls, v):
+        if v < -50.0 or v > 2000.0:
+            raise ValueError(f"Pressure {v} out of bounds [-50, 2000] mmHg")
+        return v
+
+    @field_validator("sensor_force_n")
+    @classmethod
+    def validate_force_bounds(cls, v):
+        if v is not None and (v < 0.0 or v > 200.0):
+            raise ValueError(f"Force {v} out of bounds [0, 200] N")
+        return v
+
+    @field_validator("sensor_flow_ml_h")
+    @classmethod
+    def validate_flow_bounds(cls, v):
+        if v is not None and (v < 0.0 or v > 2000.0):
+            raise ValueError(f"Flow {v} out of bounds [0, 2000] mL/h")
+        return v
+
+    @field_validator("sensor_temperature_c")
+    @classmethod
+    def validate_temp_bounds(cls, v):
+        if v is not None and (v < -20.0 or v > 100.0):
+            raise ValueError(f"Temperature {v} out of bounds [-20, 100] C")
+        return v
 
 
 class SequentialPredictionResponse(BaseModel):
