@@ -405,3 +405,4 @@ When integrating their Digital Twin model with this ML backend, the Digital Twin
    All models are trained and calibrated on synthetic physics-based simulator runs. While physics-grounded, the system has not undergone physical hardware benchtop testing with live peristaltic/syringe pump actuators.
 3. **Advisory Medical AI Notice:**  
    Predictions, health scores, and estimated sensor errors are strictly advisory. Automated recalculation of pump delivery or closed-loop calibration without biomedical engineer verification is not permitted.
+
